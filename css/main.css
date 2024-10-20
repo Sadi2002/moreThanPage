@@ -102,6 +102,10 @@ body {
 .header__desktop__list__item__link {
   color: #c0c0c0;
   font-size: 14px;
+  transition: all 0.3s;
+}
+.header__desktop__list__item__link:hover {
+  color: #ebebeb;
 }
 .header__desktop__right-side {
   display: flex;
@@ -114,10 +118,20 @@ body {
   border: 2px solid #c0c0c0;
   border-radius: 100px;
   padding: 9px 30px;
+  transition: all 0.3s;
+}
+.header__desktop__contact-btn:hover {
+  background-color: #ebebeb;
+  border-color: #ebebeb;
+  color: #1d0f1e;
 }
 .header__desktop__number {
   font-size: 14px;
   color: #c0c0c0;
+  transition: all 0.3s;
+}
+.header__desktop__number:hover {
+  color: #ebebeb;
 }
 
 @media (min-width: 360px) {
