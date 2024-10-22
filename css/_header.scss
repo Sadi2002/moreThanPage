@@ -3,6 +3,7 @@
   padding: 40px 20px;
   display: flex;
   align-items: center;
+  margin-bottom: 50px;
 
   &__mobile {
     width: 100%;
@@ -114,9 +115,7 @@
       transition: all 0.3s;
 
       &:hover {
-        background-color: #ebebeb;
-        border-color: #ebebeb;
-        color: #1d0f1e;
+        background-color: #2a2a2a54;
       }
     }
 
