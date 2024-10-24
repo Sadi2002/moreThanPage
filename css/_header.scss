@@ -75,6 +75,11 @@
         color: $light-grey;
         font-size: 12px;
         font-weight: $text-medium;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #fff;
+        }
       }
     }
 

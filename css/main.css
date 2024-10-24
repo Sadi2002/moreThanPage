@@ -95,6 +95,10 @@ main {
   color: #c0c0c0;
   font-size: 12px;
   font-weight: 500;
+  transition: all 0.3s;
+}
+.header__desktop__logo__email:hover {
+  color: #fff;
 }
 .header__desktop__middle {
   padding: 9px 45px;
