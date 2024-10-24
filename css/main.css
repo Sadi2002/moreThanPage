@@ -481,7 +481,7 @@ main {
     max-width: 550px;
   }
   .first-section__under-desktop {
-    bottom: -160px;
+    bottom: -150px;
     font-size: 16px;
     padding: 40px 30px 20px;
     max-width: 350px;
@@ -511,6 +511,6 @@ main {
     opacity: 0.8;
   }
   .first-button {
-    padding: 8px 50px;
+    padding: 12px 50px;
   }
 }/*# sourceMappingURL=main.css.map */
