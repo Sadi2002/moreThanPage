@@ -17,6 +17,7 @@ a {
 body {
   background-color: #000;
   font-family: "Poppins", sans-serif;
+  height: 500vh;
 }
 
 .container {
@@ -47,8 +48,8 @@ main {
   font-size: 26px;
 }
 .header__mobile__right-side__burger {
-  width: 42px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background-color: #806cfe;
   border-radius: 6px;
   display: flex;
@@ -57,7 +58,7 @@ main {
 }
 .header__mobile__right-side__burger__line {
   background-color: #1d0f1e;
-  width: 24px;
+  width: 20px;
   height: 3px;
   border-radius: 11px;
   position: relative;
@@ -65,15 +66,15 @@ main {
 .header__mobile__right-side__burger__line::before, .header__mobile__right-side__burger__line::after {
   content: "";
   position: absolute;
-  top: -8px;
+  top: -7px;
   left: 0;
   background-color: #1d0f1e;
-  width: 24px;
+  width: 20px;
   height: 3px;
   border-radius: 11px;
 }
 .header__mobile__right-side__burger__line::after {
-  top: 8px;
+  top: 7px;
 }
 .header__desktop {
   display: none;
@@ -220,7 +221,7 @@ main {
   display: flex;
   flex-direction: column;
   max-width: 450px;
-  margin: 0 auto;
+  margin: 0 auto 130px;
 }
 .first-section__title {
   color: #f1f1f1;
@@ -314,6 +315,48 @@ main {
 .first-button:hover {
   background-color: #fff;
   color: #000;
+}
+
+.services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.services__box {
+  width: 100%;
+  background-color: rgba(23, 23, 23, 0.5);
+  border: 3px solid rgba(69, 69, 69, 0.5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+  margin-bottom: 33px;
+}
+.services__box__icon {
+  width: 50px;
+  height: 50px;
+  background-color: #806cfe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.services__box__icon img {
+  width: 33px;
+  height: 33px;
+}
+.services__box__title {
+  color: #f1f1f1;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.services__box__description {
+  color: #949494;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 @media (min-width: 360px) {
@@ -472,6 +515,8 @@ main {
   .first-section__under-desktop {
     bottom: -110px;
     max-width: 300px;
+    border-radius: 26px;
+    border-bottom-right-radius: 0;
   }
   .first-section__title {
     font-size: 45px;
