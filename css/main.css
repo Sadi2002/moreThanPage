@@ -341,6 +341,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 .services__box {
   width: 100%;
@@ -352,6 +353,8 @@ main {
   padding: 25px 20px;
   max-width: 420px;
   margin: 0 auto 33px;
+  cursor: default;
+  transition: all 0.3s;
 }
 .services__box__icon {
   width: 50px;
@@ -380,6 +383,75 @@ main {
   line-height: 24px;
 }
 
+.portfolio__title {
+  color: #f1f1f1;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+.portfolio__title::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 15px;
+  background-image: url("/kreska.png");
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.portfolio__slider {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+}
+.portfolio__slider__list {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+.portfolio__slider__list .item {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 20s linear infinite;
+  transition: filter 0.5s;
+  animation-delay: calc(20s / var(--quantity) * (var(--position) - 1) - 20s) !important;
+}
+.portfolio__slider__list .item img {
+  width: 100%;
+}
+.portfolio__slider:hover .item {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+}
+.portfolio__slider .item:hover {
+  filter: grayscale(0);
+}
+.portfolio__slider[reverse=true] .item {
+  animation: reversePlay 20s linear infinite;
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+@keyframes reversePlay {
+  from {
+    left: calc(var(--width) * -1);
+  }
+  to {
+    left: 100%;
+  }
+}
 @media (min-width: 360px) {
   .first-section__title {
     font-size: 26px;
@@ -417,7 +489,7 @@ main {
 }
 @media (min-width: 600px) {
   .first-section {
-    max-width: 550px;
+    max-width: 450px;
   }
   .first-section__title {
     font-size: 35px;
@@ -479,6 +551,9 @@ main {
   }
   .first-section {
     margin-bottom: 150px;
+  }
+  .services__box:hover {
+    transform: scale(1.05);
   }
 }
 @media (min-width: 900px) {
