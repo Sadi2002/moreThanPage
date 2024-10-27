@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   max-width: 450px;
-  margin: 0 auto 130px;
+  margin: 0 auto 80px;
   &__title {
     color: #f1f1f1;
     text-align: center;
@@ -117,7 +117,8 @@
     display: flex;
     flex-direction: column;
     padding: 25px 20px;
-    margin-bottom: 33px;
+    max-width: 420px;
+    margin: 0 auto 33px;
 
     &__icon {
       width: 50px;
@@ -160,6 +161,15 @@
     font-size: 14px;
   }
 }
+@media (min-width: 375px) {
+  .first-section__blur {
+    width: 150px;
+    height: 150px;
+  }
+  .services__box__title {
+    font-size: 16px;
+  }
+}
 @media (min-width: 400px) {
   .first-section__title {
     font-size: 28px;
@@ -198,6 +208,14 @@
   .first-section__buttons {
     gap: 50px;
   }
+  .services {
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    &__box {
+      max-width: 45%;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -234,6 +252,9 @@
     right: 10%;
     transform: translateY(-50%);
   }
+  .first-section {
+    margin-bottom: 150px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -253,6 +274,9 @@
   .first-section__title {
     font-size: 35px;
   }
+  .first-section {
+    margin-bottom: 200px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -269,6 +293,15 @@
   }
   .first-section__title {
     font-size: 35px;
+  }
+
+  .services {
+    gap: 30px;
+    &__box {
+      margin-bottom: 0;
+      width: 31%;
+      max-width: 400px;
+    }
   }
 }
 @media (min-width: 1100px) {
@@ -318,6 +351,19 @@
   .first-section__title {
     font-size: 45px;
   }
+  .first-section__blur {
+    width: 350px;
+    height: 350px;
+    right: 6%;
+  }
+
+  .services {
+    padding: 0 100px;
+  }
+
+  .first-section {
+    margin-bottom: 300px;
+  }
 }
 @media (min-width: 1600px) {
   main {
@@ -359,5 +405,24 @@
   }
   .first-button {
     padding: 12px 50px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .services {
+    justify-content: center;
+    &__box {
+      max-width: 350px;
+      margin: 0;
+      min-height: 270px;
+    }
+    &__box__title {
+      font-size: 18px;
+    }
+
+    &__box__description {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 }
