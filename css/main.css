@@ -41,6 +41,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  left: 0;
+  padding: 0 20px;
+  height: 80px;
+  top: 0;
 }
 .header__mobile__logo {
   color: #eee;
@@ -81,6 +86,12 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: fixed;
+  left: 0;
+  padding: 0 50px;
+  z-index: 9999;
+  height: 100px;
+  top: 0;
 }
 .header__desktop__left-side {
   display: flex;
@@ -129,9 +140,24 @@ main {
   border: 2px solid #c0c0c0;
   border-radius: 100px;
   padding: 9px 30px;
+  position: relative;
+  overflow: hidden;
 }
-.header__desktop__contact-btn:hover {
-  background-color: rgba(42, 42, 42, 0.3294117647);
+.header__desktop__contact-btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  top: 50%;
+  transform: scaleX(0) translateY(-50%);
+  transform-origin: 100% 0;
+  transition: transform 0.4s cubic-bezier(0.53, 0.21, 0, 1);
+}
+.header__desktop__contact-btn:hover::before {
+  transform: scaleX(1) translateY(-50%);
+  transform-origin: 0 0;
 }
 .header__desktop__number {
   font-size: 14px;
@@ -150,6 +176,9 @@ main {
 @media (min-width: 700px) {
   .header {
     padding: 60px 50px;
+  }
+  .header__mobile {
+    height: 120px;
   }
   .header__mobile__logo {
     font-size: 40px;
@@ -177,6 +206,9 @@ main {
   .header__mobile__right-side__burger {
     width: 50px;
     height: 50px;
+  }
+  .header__mobile {
+    padding: 0 50px;
   }
 }
 @media (min-width: 768px) {
@@ -223,11 +255,17 @@ main {
   .header__desktop__contact-btn {
     font-size: 16px;
   }
+  .header__desktop__middle {
+    padding: 12px 45px;
+  }
 }
 @media (min-width: 1600px) {
   .header {
     padding: 45px 100px;
     margin-bottom: 150px;
+  }
+  .header__desktop {
+    padding: 0 100px;
   }
   .header__desktop__logo__email {
     font-size: 16px;
@@ -330,8 +368,9 @@ main {
   color: #fff;
   font-weight: 600;
   transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
 }
-
 .first-button:hover {
   background-color: #fff;
   color: #000;
@@ -383,6 +422,11 @@ main {
   line-height: 24px;
 }
 
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .portfolio__title {
   color: #f1f1f1;
   font-weight: 500;
@@ -395,11 +439,39 @@ main {
   display: block;
   width: 200px;
   height: 15px;
-  background-image: url("../kreska.png");
+  background-image: url("./kreska.png");
   position: absolute;
   top: 35px;
   left: 50%;
   transform: translateX(-50%);
+}
+.portfolio__slider {
+  margin-bottom: 20px;
+}
+.portfolio__btn {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+  background-color: #806cfe;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.portfolio__btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+.portfolio__btn a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.portfolio__btn:hover a {
+  color: #000;
 }
 
 .portfolio__slider {
@@ -481,6 +553,9 @@ main {
   .first-section__title {
     font-size: 30px;
     line-height: 45px;
+  }
+  .portfolio__btn {
+    width: 160px;
   }
 }
 @media (min-width: 600px) {
@@ -608,6 +683,9 @@ main {
   .portfolio__slider__list {
     min-width: 1250px;
   }
+  .portfolio__btn a {
+    font-weight: 600;
+  }
   .portfolio__slider__list .item {
     width: 230px;
     height: 315px;
@@ -693,7 +771,8 @@ main {
     height: 315px;
   }
   .portfolio__slider {
-    height: 440px;
+    height: 300px;
+    margin-bottom: 30px;
   }
   @keyframes autoRun {
     from {
@@ -713,6 +792,9 @@ main {
   }
 }
 @media (min-width: 1400px) {
+  .first-button {
+    padding: 10px 40px;
+  }
   .first-section__img {
     max-width: 450px;
   }
@@ -750,7 +832,10 @@ main {
     height: 315px;
   }
   .portfolio__slider {
-    height: 400px;
+    height: 340px;
+  }
+  .portfolio__btn {
+    height: 50px;
   }
   @keyframes autoRun {
     from {
@@ -819,12 +904,20 @@ main {
   .portfolio__slider__list {
     min-width: 1250px;
   }
+  .portfolio__btn {
+    width: 180px;
+    height: 50px;
+  }
+  .portfolio__btn a {
+    font-size: 16px;
+  }
   .portfolio__slider__list .item {
     width: 300px;
     height: 375px;
   }
   .portfolio__slider {
-    height: 450px;
+    height: 380px;
+    margin-bottom: 50px;
   }
   @keyframes autoRun {
     from {
@@ -867,7 +960,7 @@ main {
     height: 315px;
   }
   .portfolio__slider {
-    height: 500px;
+    height: 425px;
   }
   @keyframes autoRun {
     from {
@@ -896,7 +989,7 @@ main {
     height: 315px;
   }
   .portfolio__slider {
-    height: 540px;
+    height: 415px;
   }
   @keyframes autoRun {
     from {
@@ -926,9 +1019,6 @@ main {
   .portfolio__slider__list .item {
     width: 330px;
     height: 315px;
-  }
-  .portfolio__slider {
-    height: 540px;
   }
   @keyframes autoRun {
     from {

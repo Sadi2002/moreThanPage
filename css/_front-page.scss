@@ -95,11 +95,13 @@
   color: #fff;
   font-weight: 600;
   transition: all 0.3s;
-}
+  position: relative;
+  overflow: hidden;
 
-.first-button:hover {
-  background-color: #fff;
-  color: #000;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
 }
 
 // services
@@ -156,6 +158,10 @@
 }
 
 .portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__title {
     color: #f1f1f1;
     font-weight: $text-medium;
@@ -168,11 +174,43 @@
       display: block;
       width: 200px;
       height: 15px;
-      background-image: url("../kreska.png");
+      background-image: url("./kreska.png");
       position: absolute;
       top: 35px;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+
+  &__slider {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 25px;
+    background-color: $main-purple-color;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    & a {
+      color: #fff;
+      font-weight: 500;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    &:hover a {
+      color: #000;
     }
   }
 }
@@ -265,6 +303,12 @@
   .first-section__title {
     font-size: 30px;
     line-height: 45px;
+  }
+
+  .portfolio {
+    &__btn {
+      width: 160px;
+    }
   }
 }
 @media (min-width: 600px) {
@@ -400,6 +444,12 @@
   .portfolio__slider__list {
     min-width: calc(250px * 5);
   }
+
+  .portfolio__btn {
+    & a {
+      font-weight: 600;
+    }
+  }
   .portfolio__slider__list .item {
     width: 230px;
     height: 315px;
@@ -494,7 +544,8 @@
   }
 
   .portfolio__slider {
-    height: 440px;
+    height: 300px;
+    margin-bottom: 30px;
   }
   @keyframes autoRun {
     from {
@@ -515,6 +566,9 @@
   }
 }
 @media (min-width: 1400px) {
+  .first-button {
+    padding: 10px 40px;
+  }
   .first-section__img {
     max-width: 450px;
   }
@@ -557,7 +611,10 @@
   }
 
   .portfolio__slider {
-    height: 400px;
+    height: 340px;
+  }
+  .portfolio__btn {
+    height: 50px;
   }
   @keyframes autoRun {
     from {
@@ -631,13 +688,23 @@
   .portfolio__slider__list {
     min-width: calc(250px * 5);
   }
+
+  .portfolio__btn {
+    width: 180px;
+    height: 50px;
+  }
+
+  .portfolio__btn a {
+    font-size: 16px;
+  }
   .portfolio__slider__list .item {
     width: 300px;
     height: 375px;
   }
 
   .portfolio__slider {
-    height: 450px;
+    height: 380px;
+    margin-bottom: 50px;
   }
   @keyframes autoRun {
     from {
@@ -684,7 +751,7 @@
   }
 
   .portfolio__slider {
-    height: 500px;
+    height: 425px;
   }
   @keyframes autoRun {
     from {
@@ -716,7 +783,7 @@
   }
 
   .portfolio__slider {
-    height: 540px;
+    height: 415px;
   }
   @keyframes autoRun {
     from {
@@ -750,9 +817,6 @@
     height: 315px;
   }
 
-  .portfolio__slider {
-    height: 540px;
-  }
   @keyframes autoRun {
     from {
       left: 100%;
