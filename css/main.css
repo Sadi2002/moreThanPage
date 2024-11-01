@@ -520,6 +520,11 @@ main {
     left: 100%;
   }
 }
+.active-menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: all 0.7s ease;
+}
+
 @media (min-width: 360px) {
   .first-section__title {
     font-size: 26px;

@@ -270,6 +270,27 @@
   }
 }
 
+.active-menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: all 0.7s ease;
+}
+
+// .header__desktop.active-menu .header__desktop__logo,
+// .header__desktop.active-menu .header__desktop__logo__email,
+// .header__desktop.active-menu .header__desktop__list__item__link,
+// .header__desktop.active-menu .header__desktop__number {
+//   color: #181818;
+// }
+
+// .header__desktop.active-menu .header__desktop__contact-btn {
+//   background-color: #181818;
+//   color: #f1f1f1;
+// }
+
+// .header__desktop.active-menu .header__desktop__middle {
+//   background-color: rgba(0, 0, 0, 0.07);
+// }
+
 @media (min-width: 360px) {
   .first-section__title {
     font-size: 26px;
