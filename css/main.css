@@ -17,7 +17,7 @@ a {
 body {
   background-color: #000;
   font-family: "Poppins", sans-serif;
-  height: 500vh;
+  height: 1000vh;
 }
 
 .container {
@@ -46,6 +46,7 @@ main {
   padding: 0 20px;
   height: 80px;
   top: 0;
+  z-index: 9999;
 }
 .header__mobile__logo {
   color: #eee;
@@ -426,6 +427,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 }
 .portfolio__title {
   color: #f1f1f1;
@@ -434,12 +436,15 @@ main {
   margin-bottom: 50px;
   position: relative;
 }
+.portfolio__title span {
+  border-bottom: 5px solid #806cfe;
+}
 .portfolio__title::before {
   content: "";
   display: block;
   width: 200px;
   height: 15px;
-  background-image: url("./kreska.png");
+  background-image: url("../kreska.png");
   position: absolute;
   top: 35px;
   left: 50%;
@@ -523,6 +528,121 @@ main {
 .active-menu {
   background-color: rgba(0, 0, 0, 0.9);
   transition: all 0.7s ease;
+}
+
+.pricing__title {
+  color: #f1f1f1;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.pricing__description {
+  color: #949494;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: 90%;
+}
+.pricing__boxes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.pricing__boxes__box {
+  width: 100%;
+  border-radius: 20px;
+  min-height: 300px;
+  padding: 30px 20px;
+  position: relative;
+  border: 3px solid rgba(69, 69, 69, 0.3);
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto 33px;
+}
+.pricing__boxes__box::before {
+  opacity: 0.3;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #272727;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  z-index: -1;
+}
+.pricing__boxes__title {
+  color: #d2d2d2;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.pricing__boxes__price-details {
+  color: #93929c;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.pricing__boxes__price {
+  font-weight: 700;
+  color: #e6e6e6;
+  font-size: 28px;
+  margin-right: 5px;
+}
+.pricing__boxes__once {
+  opacity: 0.7;
+}
+.pricing__boxes__description {
+  color: #93919c;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 22px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.pricing__boxes__info {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 0;
+}
+.pricing__boxes__info__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
+}
+.pricing__boxes__info__description {
+  color: #93919c;
+  font-weight: 500;
+  font-size: 12px;
+}
+.pricing__boxes__btn {
+  background-color: #806cfe;
+  color: #f1f1f1;
+  font-weight: 500;
+  font-size: 14px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  margin-top: 20px;
+  height: 33px;
+}
+
+.material-symbols-outlined {
+  font-weight: 700;
+  color: #f1f1f1;
+  font-size: 20px;
 }
 
 @media (min-width: 360px) {

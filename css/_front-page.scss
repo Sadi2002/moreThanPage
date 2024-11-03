@@ -161,6 +161,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 
   &__title {
     color: #f1f1f1;
@@ -169,12 +170,16 @@
     margin-bottom: 50px;
     position: relative;
 
+    & span {
+      border-bottom: 5px solid $main-purple-color;
+    }
+
     &::before {
       content: "";
       display: block;
       width: 200px;
       height: 15px;
-      background-image: url("./kreska.png");
+      background-image: url("../kreska.png");
       position: absolute;
       top: 35px;
       left: 50%;
@@ -290,6 +295,136 @@
 // .header__desktop.active-menu .header__desktop__middle {
 //   background-color: rgba(0, 0, 0, 0.07);
 // }
+
+.pricing {
+  &__title {
+    color: #f1f1f1;
+    font-weight: $text-medium;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    color: #949494;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 90%;
+  }
+
+  &__boxes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__box {
+      width: 100%;
+      border-radius: 20px;
+      min-height: 300px;
+      padding: 30px 20px;
+      position: relative;
+      border: 3px solid rgba(69, 69, 69, 0.3);
+      display: flex;
+      flex-direction: column;
+      max-width: 90%;
+      margin: 0 auto 33px;
+
+      &::before {
+        opacity: 0.3;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #272727;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        z-index: -1;
+      }
+    }
+
+    &__title {
+      color: #d2d2d2;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    &__price-details {
+      color: #93929c;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    &__price {
+      font-weight: 700;
+      color: #e6e6e6;
+      font-size: 28px;
+      margin-right: 5px;
+    }
+
+    &__once {
+      opacity: 0.7;
+    }
+
+    &__description {
+      color: #93919c;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 22px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    // e5ca
+    &__info {
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 15px 0;
+
+      &__circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: relative;
+        // background-color: #d9d9d9;
+        margin-right: 10px;
+      }
+
+      &__description {
+        color: #93919c;
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+    &__btn {
+      background-color: $main-purple-color;
+      color: #f1f1f1;
+      font-weight: 500;
+      font-size: 14px;
+      width: 110px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 60px;
+      margin-top: 20px;
+      height: 33px;
+    }
+  }
+}
+
+.material-symbols-outlined {
+  font-weight: 700;
+  color: #f1f1f1;
+  font-size: 20px;
+}
 
 @media (min-width: 360px) {
   .first-section__title {
