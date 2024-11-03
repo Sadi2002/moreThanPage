@@ -162,7 +162,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   padding-top: 50px;
 
   &__title {
@@ -300,7 +300,7 @@
 
 .pricing {
   position: relative;
-  padding-top: 50px;
+  padding-top: 80px;
   &__title {
     color: #f1f1f1;
     font-weight: $text-medium;
@@ -713,6 +713,14 @@
   .pricing__blur {
     display: block;
   }
+
+  .portfolio {
+    margin-bottom: 30px;
+  }
+
+  .pricing {
+    padding-top: 120px;
+  }
 }
 @media (min-width: 1100px) {
   .first-section__img {
@@ -806,7 +814,7 @@
   }
 
   .pricing {
-    padding: 50px 100px 0;
+    padding: 120px 100px 0;
 
     &__description {
       max-width: 500px;
@@ -1083,7 +1091,7 @@
 
 @media (min-width: 1921px) {
   .portfolio {
-    padding: 0 100px;
+    padding: 120px 100px 0;
   }
   .portfolio__slider__list {
     min-width: calc(250px * 5);
@@ -1092,6 +1100,10 @@
   .portfolio__slider__list .item {
     width: 330px;
     height: 315px;
+  }
+
+  .portfolio__slider {
+    height: 410px;
   }
 
   @keyframes autoRun {
