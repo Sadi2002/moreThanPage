@@ -511,6 +511,7 @@ main {
 }
 .portfolio__slider__list .item img {
   width: 100%;
+  min-height: 350px;
 }
 .portfolio__slider .item:hover {
   filter: grayscale(0);
@@ -1292,6 +1293,9 @@ main {
   }
   .faq__boxes__answear {
     font-size: 16px;
+  }
+  .portfolio__slider__list .item img {
+    min-height: 450px;
   }
 }
 @media (min-width: 1800px) {
