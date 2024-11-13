@@ -512,6 +512,8 @@ main {
 .portfolio__slider__list .item img {
   width: 100%;
   min-height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .portfolio__slider .item:hover {
   filter: grayscale(0);
@@ -712,7 +714,7 @@ main {
   max-width: 400px;
   margin: 0 auto;
   margin-bottom: 50px;
-  max-width: 400px;
+  max-width: 500px;
 }
 .faq__boxes__box {
   border-bottom: 2px solid rgba(69, 69, 69, 0.5);
@@ -758,6 +760,11 @@ main {
 
 .faq__boxes__box.show .faq__boxes__arrow span {
   transform: rotate(180deg);
+}
+
+.faq__boxes__box.show h3,
+.faq__boxes__box.show .faq__boxes__arrow span {
+  color: #fff;
 }
 
 @media (min-width: 360px) {
@@ -907,8 +914,8 @@ main {
     font-size: 20px;
   }
   .faq__boxes__answear {
-    font-size: 15px;
-    line-height: 30px;
+    font-size: 14px;
+    line-height: 28px;
   }
 }
 @media (min-width: 900px) {
@@ -1281,6 +1288,9 @@ main {
     font-size: 16px;
     line-height: 26px;
   }
+  .faq__description {
+    margin-bottom: 100px;
+  }
   .pricing__blur {
     width: 1000px;
     height: 700px;
@@ -1289,10 +1299,10 @@ main {
     padding: 120px 270px 0;
   }
   .faq__boxes h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
   .faq__boxes__answear {
-    font-size: 16px;
+    font-size: 14px;
   }
   .portfolio__slider__list .item img {
     min-height: 450px;
