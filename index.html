@@ -381,6 +381,56 @@
           </div>
         </section>
       </main>
+      <footer>
+        <section class="contact">
+          <h2 class="contact__title">Napisz do <span>Nas</span></h2>
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact__form"
+            id="contactForm"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="36106b18-6a31-4081-8ded-87d2acd804d1"
+            />
+            <div class="contact__form__box">
+              <label for="name">Imię</label>
+              <input name="name" type="text" id="name" required />
+            </div>
+            <div class="contact__form__box">
+              <label for="email">Adres e-mail</label>
+              <input name="email" type="email" id="email" required />
+            </div>
+            <div class="contact__form__box">
+              <label for="phone">Numer telefonu</label>
+              <input name="phone" type="number" id="phone" required />
+            </div>
+            <div class="contact__form__box">
+              <label for="packet">Wybrany pakiet</label>
+              <select name="packet" id="packet" required>
+                <option value="">Wybierz pakiet...</option>
+                <option value="startowy">Pakiet startowy</option>
+                <option value="biznes">Pakiet biznes</option>
+                <option value="premium">Pakiet premium</option>
+              </select>
+            </div>
+            <div class="contact__form__box">
+              <label for="message">Wiadomość</label>
+              <textarea
+                maxlength="500"
+                cols="50"
+                rows="10"
+                id="message"
+                name="message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" id="submitButton" disabled>Wyślij</button>
+          </form>
+        </section>
+      </footer>
     </div>
     <script src="script.js"></script>
   </body>

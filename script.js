@@ -39,3 +39,18 @@ faqBoxes.forEach((box) => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const submitButton = document.getElementById("submitButton");
+
+  // Funkcja do sprawdzenia, czy wszystkie wymagane pola są uzupełnione
+  function checkForm() {
+    // Sprawdzamy, czy formularz jest poprawny
+    const isFormValid = form.checkValidity();
+    submitButton.disabled = !isFormValid;
+  }
+
+  // Nasłuchujemy zmiany wartości we wszystkich polach formularza
+  form.addEventListener("input", checkForm);
+});
