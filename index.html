@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MTP</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
@@ -63,25 +64,26 @@
       </header>
       <main>
         <section class="first-section">
-          <h1 class="first-section__title">
+          <h1 class="first-section__title" data-aos="fade-up">
             Strona <span class="colored-text">WWW</span><br />
             dla Twojego Biznesu
           </h1>
-          <p class="first-section__text">
+          <p class="first-section__text" data-aos="fade-up">
             Tworzymy profesjonalne strony internetowe, które przyciągają
             klientów i zwiększają sprzedaż.
           </p>
           <img
+            data-aos="fade-up"
             src="first-section.png"
             alt="zdjęcie laptopa"
             class="first-section__img"
           />
-          <div class="first-section__buttons">
+          <div class="first-section__buttons" data-aos="fade-up">
             <a class="filled first-button" href="#contact">Kontakt</a>
             <a class="second-button" href="#services">Czytaj więcej</a>
           </div>
           <div class="first-section__blur"></div>
-          <div class="first-section__under-desktop">
+          <div class="first-section__under-desktop" data-aos="fade-up">
             <span class="bold-text">100%</span>
             <span>“zaangażowania, jakości, profesjonalizmu”</span>
           </div>
@@ -180,12 +182,12 @@
           </button>
         </section>
         <section id="pricing" class="pricing">
-          <h2 class="pricing__title">Cennik</h2>
-          <p class="pricing__description">
+          <h2 class="pricing__title" data-aos="fade-up">Cennik</h2>
+          <p class="pricing__description" data-aos="fade-up">
             Tutaj znajdziesz szczegóły dotyczące cen za tworzenie stron
             internetowych, projektowanie logotypów oraz dostępne pakiety usług.
           </p>
-          <div class="pricing__boxes">
+          <div class="pricing__boxes" data-aos="fade-up">
             <div class="pricing__boxes__box">
               <h3 class="pricing__boxes__title">Pakiet Startowy</h3>
               <span class="pricing__boxes__price-details"
@@ -290,12 +292,14 @@
           <div class="pricing__blur"></div>
         </section>
         <section id="faq" class="faq">
-          <h2 class="faq__title">Najczęstsze <span>pytania</span></h2>
-          <p class="faq__description">
+          <h2 data-aos="fade-up" class="faq__title">
+            Najczęstsze <span>pytania</span>
+          </h2>
+          <p data-aos="fade-up" class="faq__description">
             Tutaj znajdziesz odpowiedzi na najczęściej zadawane pytania
             dotyczące naszych usług.
           </p>
-          <div class="faq__boxes">
+          <div data-aos="fade-up" class="faq__boxes">
             <div class="faq__boxes__box">
               <div class="faq__boxes__question">
                 <h3>Jak długo trwa stworzenie strony internetowej?</h3>
@@ -382,7 +386,7 @@
         </section>
       </main>
       <footer>
-        <section id="contact" class="contact">
+        <section id="contact" class="contact" data-aos="fade-up">
           <h2 class="contact__title">Napisz do <span>Nas</span></h2>
           <form
             action="https://api.web3forms.com/submit"
@@ -455,8 +459,18 @@
         ><span class="material-symbols-outlined"> keyboard_arrow_up </span></a
       >
     </div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/particles.min.js"></script>
+    <script>
+      AOS.init({
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 200, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 800, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+      });
+    </script>
     <script src="./js/script.js"></script>
   </body>
 </html>
