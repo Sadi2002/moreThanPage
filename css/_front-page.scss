@@ -226,6 +226,7 @@
   width: 100%;
   height: var(--height);
   overflow: hidden;
+  margin-bottom: 30px;
 
   &__list {
     display: flex;
@@ -538,13 +539,14 @@ footer {
 }
 
 .contact {
+  margin-bottom: 40px;
   &__title {
     color: #f1f1f1;
     font-weight: 500;
     text-align: center;
     margin-bottom: 50px;
     position: relative;
-    padding-top: 50px;
+    padding-top: 0px;
 
     & span {
       border-bottom: 5px solid #806cfe;
@@ -646,6 +648,39 @@ footer {
 
 .up span {
   font-size: 30px;
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10000vh;
+  z-index: -9999;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.social-container .fb,
+.social-container .instagram {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-container a {
+  color: #eaeaea;
+}
+
+.copyright p {
+  color: #cbcbcb;
+  text-align: center;
 }
 
 @media (min-width: 360px) {
@@ -786,7 +821,7 @@ footer {
   }
 
   .services {
-    gap: 30px;
+    gap: 0px;
     justify-content: center;
   }
 
@@ -815,6 +850,30 @@ footer {
 
   footer {
     padding: 0 50px;
+  }
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .copyright p {
+    text-align: left;
+  }
+  .contact {
+    margin-bottom: 100px;
+  }
+  .social-container a {
+    transition: all 0.3s;
+  }
+  .social-container a:hover {
+    color: #fff;
+  }
+  .social-container div img {
+    transition: all 0.3s;
+  }
+  .social-container div:hover img {
+    filter: grayscale(1);
   }
 }
 
@@ -941,7 +1000,10 @@ footer {
   }
 
   footer {
-    padding: 70px 100px 0;
+    padding: 0px 100px 0;
+  }
+  .contact {
+    padding-top: 120px;
   }
   .up {
     width: 60px;
@@ -954,9 +1016,17 @@ footer {
   }
 
   .contact__form button {
-    width: 300px;
-    border-radius: 0;
+    width: 220px;
+    border-radius: 100px;
     border: none;
+    height: 50px;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .contact__form button:hover {
+    background-color: #fff;
+    color: #1b191f;
   }
 
   .contact__form button[disabled] {
@@ -1280,7 +1350,7 @@ footer {
     min-height: 450px;
   }
   footer {
-    padding: 70px 270px 0;
+    padding: 0px 270px 0;
   }
 }
 

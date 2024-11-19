@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="./css//main.css" />
   </head>
-  <body>
+  <body id="body">
     <div class="container">
       <header class="header">
         <div class="header__mobile">
@@ -49,7 +49,7 @@
                 >
               </li>
               <li class="header__desktop__list__item">
-                <a href="#" class="header__desktop__list__item__link">FAQ</a>
+                <a href="#faq" class="header__desktop__list__item__link">FAQ</a>
               </li>
             </ul>
           </nav>
@@ -57,7 +57,7 @@
             <a class="header__desktop__number" href="tel:+123456789"
               >+48 123 456 789</a
             >
-            <a class="header__desktop__contact-btn" href="#">Kontakt</a>
+            <a class="header__desktop__contact-btn" href="#contact">Kontakt</a>
           </div>
         </div>
       </header>
@@ -77,8 +77,8 @@
             class="first-section__img"
           />
           <div class="first-section__buttons">
-            <a class="filled first-button" href="#">Kontakt</a>
-            <a class="second-button" href="#">Czytaj więcej</a>
+            <a class="filled first-button" href="#contact">Kontakt</a>
+            <a class="second-button" href="#services">Czytaj więcej</a>
           </div>
           <div class="first-section__blur"></div>
           <div class="first-section__under-desktop">
@@ -289,7 +289,7 @@
           </div>
           <div class="pricing__blur"></div>
         </section>
-        <section class="faq">
+        <section id="faq" class="faq">
           <h2 class="faq__title">Najczęstsze <span>pytania</span></h2>
           <p class="faq__description">
             Tutaj znajdziesz odpowiedzi na najczęściej zadawane pytania
@@ -382,7 +382,7 @@
         </section>
       </main>
       <footer>
-        <section class="contact">
+        <section id="contact" class="contact">
           <h2 class="contact__title">Napisz do <span>Nas</span></h2>
           <form
             action="https://api.web3forms.com/submit"
@@ -435,12 +435,28 @@
             <button type="submit" id="submitButton" disabled>Wyślij</button>
           </form>
         </section>
+        <section class="footer-info">
+          <div class="social-container">
+            <div class="fb">
+              <img src="./facebook.png" alt="ikona facebooka" />
+              <a href="#">Facebook</a>
+            </div>
+            <div class="instagram">
+              <img src="./instagram.png" alt="ikona instagrama" />
+              <a href="#">Instagram</a>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>© 2024 moreThanPage. Wszystkie prawa zastrzeżone.</p>
+          </div>
+        </section>
       </footer>
       <a href="#" class="up"
         ><span class="material-symbols-outlined"> keyboard_arrow_up </span></a
       >
     </div>
 
-    <script src="script.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
