@@ -395,26 +395,31 @@
               name="access_key"
               value="36106b18-6a31-4081-8ded-87d2acd804d1"
             />
-            <div class="contact__form__box">
-              <label for="name">Imię</label>
-              <input name="name" type="text" id="name" required />
+
+            <div class="contact__form__box--first">
+              <div class="contact__form__box">
+                <label for="name">Imię</label>
+                <input name="name" type="text" id="name" required />
+              </div>
+              <div class="contact__form__box">
+                <label for="email">Adres e-mail</label>
+                <input name="email" type="email" id="email" required />
+              </div>
             </div>
-            <div class="contact__form__box">
-              <label for="email">Adres e-mail</label>
-              <input name="email" type="email" id="email" required />
-            </div>
-            <div class="contact__form__box">
-              <label for="phone">Numer telefonu</label>
-              <input name="phone" type="number" id="phone" required />
-            </div>
-            <div class="contact__form__box">
-              <label for="packet">Wybrany pakiet</label>
-              <select name="packet" id="packet" required>
-                <option value="">Wybierz pakiet...</option>
-                <option value="startowy">Pakiet startowy</option>
-                <option value="biznes">Pakiet biznes</option>
-                <option value="premium">Pakiet premium</option>
-              </select>
+            <div class="contact__form__box--second">
+              <div class="contact__form__box">
+                <label for="phone">Numer telefonu</label>
+                <input name="phone" type="number" id="phone" required />
+              </div>
+              <div class="contact__form__box">
+                <label for="packet">Wybrany pakiet</label>
+                <select name="packet" id="packet" required>
+                  <option value="">Wybierz pakiet...</option>
+                  <option value="startowy">Pakiet startowy</option>
+                  <option value="biznes">Pakiet biznes</option>
+                  <option value="premium">Pakiet premium</option>
+                </select>
+              </div>
             </div>
             <div class="contact__form__box">
               <label for="message">Wiadomość</label>
@@ -431,7 +436,11 @@
           </form>
         </section>
       </footer>
+      <a href="#" class="up"
+        ><span class="material-symbols-outlined"> keyboard_arrow_up </span></a
+      >
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

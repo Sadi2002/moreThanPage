@@ -1,5 +1,6 @@
 const headerDesktop = document.querySelector(".header__desktop");
 const headerMobile = document.querySelector(".header__mobile");
+const upBtn = document.querySelector(".up");
 
 function toggleActiveMenu() {
   if (window.innerWidth >= 320 && window.scrollY >= 100) {
@@ -54,3 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Nasłuchujemy zmiany wartości we wszystkich polach formularza
   form.addEventListener("input", checkForm);
 });
+
+const scrollTop = () => {
+  if (window.innerWidth >= 320 && window.scrollY >= 200) {
+    upBtn.classList.add("show");
+  } else {
+    upBtn.classList.remove("show");
+  }
+};
+
+window.addEventListener("scroll", scrollTop);
+window.addEventListener("resize", scrollTop);

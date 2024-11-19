@@ -605,6 +605,45 @@ footer {
   }
 }
 
+.contact__form__box--first,
+.contact__form__box--second {
+  width: 100%;
+}
+
+.up {
+  width: 50px;
+  height: 50px;
+  background-color: $main-purple-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.up.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.up:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.1);
+}
+
+.up:hover span {
+  color: #1b191f;
+}
+
+.up span {
+  font-size: 30px;
+}
+
 @media (min-width: 360px) {
   .first-section__title {
     font-size: 26px;
@@ -758,15 +797,20 @@ footer {
     top: 40px;
   }
 
-  .faq__title {
+  .faq__title,
+  .contact__title {
     font-size: 30px;
   }
   .faq__boxes h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
   .faq__boxes__answear {
     font-size: 14px;
     line-height: 28px;
+  }
+
+  footer {
+    padding: 0 50px;
   }
 }
 
@@ -884,6 +928,25 @@ footer {
   .pricing,
   .faq {
     padding-top: 120px;
+  }
+
+  .contact__form__box--first,
+  .contact__form__box--second {
+    display: flex;
+    gap: 30px;
+  }
+
+  footer {
+    padding: 70px 100px 0;
+  }
+  .up {
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    right: 50px;
+  }
+  .contact__form {
+    align-items: flex-start;
   }
 }
 @media (min-width: 1100px) {
@@ -1201,6 +1264,9 @@ footer {
   }
   .portfolio__slider__list .item img {
     min-height: 450px;
+  }
+  footer {
+    padding: 70px 270px 0;
   }
 }
 
